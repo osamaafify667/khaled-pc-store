@@ -172,7 +172,7 @@ export default async function HomePage() {
             description="من المعالج حتى الكيسة والملحقات — اختر الفئة وابدأ البناء."
             href="/shop"
           />
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="grid grid-cols-1 gap-3 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
             {categories.slice(0, 12).map((category) => (
               <CategoryCard key={category.id} category={category} />
             ))}

@@ -27,8 +27,8 @@ export default async function AdminCouponsPage({ searchParams }: PageProps) {
         <p className="mt-1 text-xs text-slate-400">أكواد الخصم تُتحقق على السيرفر عند إتمام الطلب.</p>
       </div>
 
-      <div className="grid gap-5 xl:grid-cols-[1.2fr_0.8fr]">
-        <div className="table-wrap overflow-visible">
+      <div className="grid grid-cols-1 gap-5 xl:grid-cols-[1.2fr_0.8fr]">
+        <div className="table-wrap">
           <table className="data-table">
             <thead>
               <tr>

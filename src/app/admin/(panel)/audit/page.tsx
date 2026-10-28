@@ -68,10 +68,10 @@ export default async function AdminAuditPage({ searchParams }: PageProps) {
       </div>
 
       <form action="/admin/audit" className="surface flex flex-wrap items-end gap-3 p-4">
-        <div className="min-w-[220px] flex-1">
+        <div className="w-full sm:min-w-[220px] sm:flex-1">
           <Input name="q" defaultValue={q} placeholder="نوع الإجراء، معرف الكيان، أو بريد المستخدم…" aria-label="بحث السجل" />
         </div>
-        <div className="w-48">
+        <div className="w-full sm:w-48">
           <Select name="entity" defaultValue={entity} aria-label="نوع الكيان">
             <option value="">كل الكيانات</option>
             {entities.map((row) => (
@@ -81,7 +81,7 @@ export default async function AdminAuditPage({ searchParams }: PageProps) {
             ))}
           </Select>
         </div>
-        <Button type="submit" variant="secondary">
+        <Button type="submit" variant="secondary" className="w-full sm:w-auto">
           <Search className="h-4 w-4" />
           بحث
         </Button>

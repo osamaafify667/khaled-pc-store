@@ -37,10 +37,10 @@ export function ProductCard({
           className="transition duration-500 group-hover:scale-[1.04]"
           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 280px"
         />
-        <div className="absolute inset-x-3 top-3 flex items-start justify-between gap-2">
+        <div className="absolute inset-x-2 top-2 flex items-start justify-between gap-1.5 sm:inset-x-3 sm:top-3 sm:gap-2">
           <div className="flex flex-col items-start gap-1.5">
-            {percent ? <Badge tone="danger">خصم {percent}%</Badge> : null}
-            {product.isFeatured ? <Badge tone="accent">مميز</Badge> : null}
+            {percent ? <Badge tone="danger" className="px-2 py-0.5 text-[10px]">خصم {percent}%</Badge> : null}
+            {product.isFeatured ? <Badge tone="accent" className="px-2 py-0.5 text-[10px]">مميز</Badge> : null}
           </div>
           <StockBadge available={available} threshold={product.inventory?.lowStockThreshold ?? 3} />
         </div>
@@ -73,7 +73,7 @@ export function ProductCard({
             <Link
               href={`/product/${product.slug}`}
               aria-label={`تفاصيل ${product.nameAr}`}
-              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-line text-slate-400 transition hover:border-accent/40 hover:text-accent"
+              className="hidden h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-line text-slate-400 transition hover:border-accent/40 hover:text-accent sm:flex"
             >
               <ArrowLeft className="h-4 w-4" />
             </Link>
@@ -86,7 +86,7 @@ export function ProductCard({
 
 export function ProductGrid({ products, className }: { products: ProductListItem[]; className?: string }) {
   return (
-    <div className={cn("grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4", className)}>
+    <div className={cn("grid grid-cols-1 gap-3 xs:grid-cols-2 sm:gap-4 md:grid-cols-3 lg:grid-cols-4", className)}>
       {products.map((product, index) => (
         <ProductCard key={product.id} product={product} priority={index < 4} />
       ))}

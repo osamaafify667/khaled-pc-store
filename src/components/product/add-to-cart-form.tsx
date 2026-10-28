@@ -70,7 +70,7 @@ export function AddToCartForm({
           size={size}
           variant={showSuccess ? "success" : "primary"}
           disabled={pending}
-          className={cn(showQuantity ? "flex-1" : "w-full", "min-w-[130px]")}
+          className={cn(showQuantity ? "flex-1" : "w-full", compact ? "min-w-0" : "min-w-[130px]")}
         >
           {pending ? (
             <Loader2 className="h-4 w-4 animate-spin" />

@@ -53,8 +53,8 @@ export default async function AdminShippingPage({ searchParams }: PageProps) {
         </div>
       ) : null}
 
-      <div className="grid gap-5 xl:grid-cols-[1.2fr_0.8fr]">
-        <div className="table-wrap overflow-visible">
+      <div className="grid grid-cols-1 gap-5 xl:grid-cols-[1.2fr_0.8fr]">
+        <div className="table-wrap">
           <table className="data-table">
             <thead>
               <tr>

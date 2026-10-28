@@ -38,8 +38,8 @@ export default async function AdminUsersPage() {
         </p>
       </div>
 
-      <div className="grid gap-5 xl:grid-cols-[1.3fr_0.7fr]">
-        <div className="table-wrap overflow-visible">
+      <div className="grid grid-cols-1 gap-5 xl:grid-cols-[1.3fr_0.7fr]">
+        <div className="table-wrap">
           <table className="data-table min-w-[760px]">
             <thead>
               <tr>

@@ -21,15 +21,15 @@ export function Header({
     "قطع أصلية بضمان رسمي · استلام من المحل في مول البستان، وسط البلد";
 
   return (
-    <header className="sticky top-0 z-40">
-      <div className="bg-gradient-to-l from-accent/15 via-accent/10 to-sky-brand/10 text-center text-[11px] font-semibold text-accent-soft sm:text-xs">
+    <header className="sticky top-0 z-40 bg-ink-950">
+      <div className="hidden bg-gradient-to-l from-accent/15 via-accent/10 to-sky-brand/10 text-center text-[11px] font-semibold text-accent-soft sm:block sm:text-xs">
         <div className="container-x flex items-center justify-center gap-2 py-2">
           <ShieldCheck className="h-3.5 w-3.5" />
           <span className="line-clamp-1">{announcement}</span>
         </div>
       </div>
 
-      <div className="border-b border-line bg-ink-950/85 backdrop-blur-xl">
+      <div className="border-b border-line bg-ink-950">
         <div className="container-x flex h-16 items-center justify-between gap-3 sm:h-[74px]">
           <div className="flex items-center gap-2">
             <MobileMenu categories={categories} />

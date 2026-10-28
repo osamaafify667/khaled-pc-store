@@ -60,10 +60,10 @@ export default async function AdminOrdersPage({ searchParams }: PageProps) {
       </div>
 
       <form action="/admin/orders" className="surface flex flex-wrap items-end gap-3 p-4">
-        <div className="min-w-[200px] flex-1">
+        <div className="w-full sm:min-w-[200px] sm:flex-1">
           <Input name="q" defaultValue={search} placeholder="رقم الطلب، الاسم، أو الهاتف…" aria-label="بحث الطلبات" />
         </div>
-        <div className="w-44">
+        <div className="w-full sm:w-44">
           <Select name="status" defaultValue={status} aria-label="حالة الطلب">
             <option value="">كل الحالات</option>
             {Object.entries(ORDER_STATUS_LABELS).map(([value, label]) => (
@@ -73,7 +73,7 @@ export default async function AdminOrdersPage({ searchParams }: PageProps) {
             ))}
           </Select>
         </div>
-        <div className="w-48">
+        <div className="w-full sm:w-48">
           <Select name="paymentStatus" defaultValue={paymentStatus} aria-label="حالة الدفع">
             <option value="">كل حالات الدفع</option>
             {Object.entries(PAYMENT_STATUS_LABELS).map(([value, label]) => (
@@ -83,7 +83,7 @@ export default async function AdminOrdersPage({ searchParams }: PageProps) {
             ))}
           </Select>
         </div>
-        <Button type="submit" variant="secondary">
+        <Button type="submit" variant="secondary" className="w-full sm:w-auto">
           <Search className="h-4 w-4" />
           بحث
         </Button>

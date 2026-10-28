@@ -75,7 +75,7 @@ export default async function AdminOrderDetailPage({ params }: PageProps) {
         </div>
       </div>
 
-      <div className="grid gap-5 xl:grid-cols-[1.35fr_0.65fr]">
+      <div className="grid grid-cols-1 gap-5 xl:grid-cols-[1.35fr_0.65fr]">
         <div className="space-y-5">
           <section className="surface p-5">
             <h2 className="flex items-center gap-2 text-sm font-bold text-white">
@@ -130,7 +130,7 @@ export default async function AdminOrderDetailPage({ params }: PageProps) {
             </dl>
           </section>
 
-          <div className="grid gap-5 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             <section className="surface p-5">
               <h2 className="flex items-center gap-2 text-sm font-bold text-white">
                 <UserRound className="h-4 w-4 text-accent" />

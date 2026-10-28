@@ -60,10 +60,10 @@ export default async function AdminCustomersPage({ searchParams }: PageProps) {
       </div>
 
       <form action="/admin/customers" className="surface flex flex-wrap items-center gap-3 p-4">
-        <div className="min-w-[240px] flex-1">
+        <div className="w-full sm:min-w-[240px] sm:flex-1">
           <Input name="q" defaultValue={search} placeholder="ابحث بالاسم أو البريد أو الهاتف…" aria-label="بحث العملاء" />
         </div>
-        <Button type="submit" variant="secondary">
+        <Button type="submit" variant="secondary" className="w-full sm:w-auto">
           <Search className="h-4 w-4" />
           بحث
         </Button>

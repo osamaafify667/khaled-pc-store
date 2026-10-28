@@ -105,10 +105,10 @@ export default async function AdminProductsPage({ searchParams }: PageProps) {
       </div>
 
       <form className="surface flex flex-wrap items-end gap-3 p-4" action="/admin/products">
-        <div className="min-w-[200px] flex-1">
+        <div className="w-full sm:min-w-[200px] sm:flex-1">
           <Input name="q" defaultValue={q} placeholder="ابحث بالاسم أو SKU أو الموديل…" aria-label="بحث المنتجات" />
         </div>
-        <div className="w-40">
+        <div className="w-full sm:w-40">
           <Select name="status" defaultValue={status} aria-label="حالة المنتج">
             <option value="">كل الحالات</option>
             <option value="ACTIVE">منشور</option>
@@ -116,7 +116,7 @@ export default async function AdminProductsPage({ searchParams }: PageProps) {
             <option value="ARCHIVED">مؤرشف</option>
           </Select>
         </div>
-        <div className="w-44">
+        <div className="w-full sm:w-44">
           <Select name="category" defaultValue={categorySlug} aria-label="التصنيف">
             <option value="">كل التصنيفات</option>
             {categories.map((category) => (
@@ -126,14 +126,14 @@ export default async function AdminProductsPage({ searchParams }: PageProps) {
             ))}
           </Select>
         </div>
-        <div className="w-40">
+        <div className="w-full sm:w-40">
           <Select name="sort" defaultValue={sort} aria-label="الترتيب">
             <option value="newest">الأحدث</option>
             <option value="sales">الأكثر مبيعًا</option>
             <option value="price">الأعلى سعرًا</option>
           </Select>
         </div>
-        <Button type="submit" variant="secondary">
+        <Button type="submit" variant="secondary" className="w-full sm:w-auto">
           <SlidersHorizontal className="h-4 w-4" />
           تطبيق
         </Button>

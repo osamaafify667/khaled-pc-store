@@ -129,7 +129,7 @@ export default async function AdminDashboardPage({ searchParams }: PageProps) {
         </div>
       </div>
 
-      <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
         {cards.map((card) => (
           <Link key={card.label} href={card.href} className="surface surface-hover p-4">
             <div className="flex items-start justify-between gap-2">
@@ -146,7 +146,7 @@ export default async function AdminDashboardPage({ searchParams }: PageProps) {
         ))}
       </div>
 
-      <div className="grid gap-5 xl:grid-cols-[1.35fr_0.65fr]">
+      <div className="grid grid-cols-1 gap-5 xl:grid-cols-[1.35fr_0.65fr]">
         <div className="surface p-5">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <div>
@@ -203,7 +203,7 @@ export default async function AdminDashboardPage({ searchParams }: PageProps) {
         </div>
       </div>
 
-      <div className="grid gap-5 xl:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
         <div className="surface p-5">
           <div className="flex items-center justify-between">
             <h2 className="text-base">أحدث الطلبات</h2>

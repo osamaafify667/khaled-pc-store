@@ -79,7 +79,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
             </div>
             <div className="border-t border-line px-4 py-2 lg:hidden">
               <div className="flex gap-1 overflow-x-auto no-scrollbar">
-                <AdminNav />
+                <AdminNav horizontal />
               </div>
             </div>
           </header>

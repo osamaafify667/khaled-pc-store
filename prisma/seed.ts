@@ -939,6 +939,8 @@ async function seedStoreSettings() {
     update: {},
     create: {
       id: 1,
+      phone: "+201220534625",
+      whatsapp: "+201220534625",
       shippingFlatFee: 70,
       freeShippingThreshold: 25000,
       codEnabled: true,

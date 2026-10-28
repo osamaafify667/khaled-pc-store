@@ -6,6 +6,7 @@ import {
   Boxes,
   ClipboardList,
   Cog,
+  ExternalLink,
   LayoutDashboard,
   Package,
   Percent,
@@ -34,11 +35,11 @@ export const ADMIN_NAV = [
   { href: "/admin/audit", label: "سجل النشاط", icon: ScrollText },
 ];
 
-export function AdminNav() {
+export function AdminNav({ horizontal = false }: { horizontal?: boolean }) {
   const pathname = usePathname();
 
   return (
-    <nav className="grid gap-1">
+    <nav className={horizontal ? "flex gap-1" : "grid gap-1"}>
       {ADMIN_NAV.map((item) => {
         const active = item.exact ? pathname === item.href : pathname.startsWith(item.href);
         return (
@@ -47,6 +48,7 @@ export function AdminNav() {
             href={item.href}
             className={cn(
               "flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-xs font-bold transition",
+              horizontal && "shrink-0 whitespace-nowrap py-2",
               active ? "bg-accent/15 text-accent" : "text-slate-400 hover:bg-ink-800 hover:text-white",
             )}
           >
@@ -66,8 +68,13 @@ export function AdminBreadcrumbTitle({ title }: { title: string }) {
 export function AdminTopLinks() {
   return (
     <div className="flex items-center gap-2 text-xs">
-      <Link href="/" className="rounded-lg border border-line px-3 py-2 font-bold text-slate-300 transition hover:border-accent/40 hover:text-accent">
-        عرض المتجر
+      <Link
+        href="/"
+        aria-label="عرض المتجر"
+        className="flex items-center gap-1.5 rounded-lg border border-line px-2.5 py-2 font-bold text-slate-300 transition hover:border-accent/40 hover:text-accent"
+      >
+        <ExternalLink className="h-3.5 w-3.5" />
+        <span className="hidden sm:inline">عرض المتجر</span>
       </Link>
     </div>
   );

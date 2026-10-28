@@ -97,10 +97,10 @@ export default async function AdminInventoryPage({ searchParams }: PageProps) {
 
       <form action="/admin/inventory" className="surface flex flex-wrap items-center gap-3 p-4">
         {filter ? <input type="hidden" name="filter" value={filter} /> : null}
-        <div className="min-w-[220px] flex-1">
+        <div className="w-full sm:min-w-[220px] sm:flex-1">
           <Input name="q" defaultValue={q} placeholder="ابحث باسم المنتج أو SKU…" aria-label="بحث المخزون" />
         </div>
-        <Button type="submit" variant="secondary">
+        <Button type="submit" variant="secondary" className="w-full sm:w-auto">
           <Search className="h-4 w-4" />
           بحث
         </Button>
